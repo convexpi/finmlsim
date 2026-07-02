@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finmlsim"
+version = "0.4.1"
+description = "Simulation toolkit for financial machine learning: scholarly market, microstructure, and execution simulators for teaching and research."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Shane Conway", email = "shane.conway@gmail.com" }]
+maintainers = [{ name = "Shane Conway", email = "shane.conway@gmail.com" }]
+keywords = [
+    "finance", "quantitative-finance", "machine-learning", "simulation", "monte-carlo",
+    "stochastic-volatility", "market-microstructure", "limit-order-book", "optimal-execution",
+    "heston", "sabr", "hawkes-process", "rough-volatility", "almgren-chriss", "kyle-model",
+    "block-bootstrap",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+analysis = ["pandas>=2.0", "scipy>=1.10", "matplotlib>=3.7", "statsmodels>=0.14"]
+dev = ["build", "twine", "ruff", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/convexpi/finmlsim"
+Documentation = "https://github.com/convexpi/finmlsim/blob/main/README.md"
+Repository = "https://github.com/convexpi/finmlsim"
+Issues = "https://github.com/convexpi/finmlsim/issues"
+
+[tool.setuptools]
+packages = ["finmlsim"]
+license-files = ["LICENSE"]
